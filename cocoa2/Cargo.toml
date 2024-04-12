@@ -1,0 +1,14 @@
+[package]
+name = "cocoa2"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+objc = "0.2"
+libc = "0.2"
+bitflags = "2.5.0"
+cocoa2_derive = { path = "../cocoa2_derive" }
+cocoa2_base = { path = "../cocoa2_base" }
+dispatch = "0.2.0"

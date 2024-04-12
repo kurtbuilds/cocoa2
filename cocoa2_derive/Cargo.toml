@@ -1,0 +1,16 @@
+[package]
+name = "cocoa2_derive"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+# a proc macro crate
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro2 = "1"
+quote = "1"
+syn = "2"
+cocoa2_base = { path = "../cocoa2_base" }

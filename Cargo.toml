@@ -1,0 +1,7 @@
+[workspace]
+resolver = "2"
+members = [
+    "cocoa2",
+    "cocoa2_base",
+    "cocoa2_derive",
+]
