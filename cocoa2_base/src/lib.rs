@@ -4,6 +4,9 @@ use objc::runtime::{Class, Object};
 pub type id = *mut Object;
 
 pub trait Bridge {
+    /// Give a reference to the objc class object for class methods
+    /// Returns same objects as `class!(NSString)` in `objc` crate.
+    /// E.g. `Self::class().alloc()`
     fn class() -> &'static Class;
     fn id(&self) -> id;
     unsafe fn from_id(id: id) -> Self;

@@ -6,25 +6,15 @@ use quote::quote;
 pub fn bridge_derive(input: TokenStream) -> TokenStream {
     // Parse the input tokens into a syntax tree
     let ast: DeriveInput = syn::parse(input).unwrap();
-
-    // Build the trait implementation
     let gen = impl_bridge(&ast);
-
-    // Return the generated impl
-    gen.into()
+    gen
 }
 
 // create a derive implementation that just prints the name struct and the id
 #[proc_macro_derive(Display)]
 pub fn display_derive(input: TokenStream) -> TokenStream {
-    // Parse the input tokens into a syntax tree
     let ast: DeriveInput = syn::parse(input).unwrap();
-
-    // Build the trait implementation
-    let gen = impl_display(&ast);
-
-    // Return the generated impl
-    gen.into()
+    impl_display(&ast)
 }
 
 fn impl_bridge(ast: &DeriveInput) -> TokenStream {

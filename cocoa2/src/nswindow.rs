@@ -1,5 +1,3 @@
-use std::ops::Deref;
-
 use bitflags::bitflags;
 
 use cocoa2_base::Any;
